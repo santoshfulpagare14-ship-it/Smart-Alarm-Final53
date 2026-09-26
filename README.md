@@ -49,4 +49,4 @@ git remote add origin YOUR_REPO_URL
 git push -u origin main
 ```
 
-Made for Indore Dev.
+Made for Indore Dev. 
