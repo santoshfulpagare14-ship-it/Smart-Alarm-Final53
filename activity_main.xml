@@ -1,0 +1,51 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView android:text="Repeat Alarm" android:textSize="28sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:cardCornerRadius="16dp">
+    <LinearLayout android:padding="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Alarm Label">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="My Alarm"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <Button android:id="@+id/btnTime" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Time: 08:00"/>
+            <Space android:layout_width="12dp" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btnDate" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Today"/>
+        </LinearLayout>
+
+        <TextView android:text="Repeat Interval" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etInterval" android:inputType="number" android:text="10" android:layout_width="80dp" android:layout_height="wrap_content"/>
+            <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/toggleUnit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" app:singleSelection="true" app:selectionRequired="true">
+                <Button android:id="@+id/unitSec" android:text="Sec" style="?attr/materialButtonOutlinedButtonStyle"/>
+                <Button android:id="@+id/unitMin" android:text="Min" style="?attr/materialButtonOutlinedButtonStyle"/>
+                <Button android:id="@+id/unitHour" android:text="Hour" style="?attr/materialButtonOutlinedButtonStyle"/>
+                <Button android:id="@+id/unitDay" android:text="Day" style="?attr/materialButtonOutlinedButtonStyle"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+        <TextView android:id="@+id/tvIntervalPreview" android:text="Har 10 sec me bajega" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Kitni baar bajna chahiye? (Auto Stop)" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.google.android.material.slider.Slider android:id="@+id/sliderCount" android:valueFrom="1" android:valueTo="100" android:value="5" android:stepSize="1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/tvCount" android:text="5 executions ke baad band" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Alarm Tone" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/tvAudioName" android:text="Default ringtone" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btnPickAudio" android:text="Choose" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchVolumeMute" android:text="Volume Down se Mute karo" android:checked="true" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        
+        <Button android:id="@+id/btnSetAlarm" android:text="ALARM SET KARO" android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="60dp"/>
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView android:id="@+id/tvStatus" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>

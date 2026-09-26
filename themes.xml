@@ -1,0 +1,6 @@
+
+<resources>
+    <style name="Theme.RepeatAlarm" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#6C5CE7</item>
+    </style>
+</resources>
